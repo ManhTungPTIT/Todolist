@@ -1,0 +1,104 @@
+@page
+@using Todo.Models.Dtos
+
+@{
+    Layout = "_User";
+    var listNote = ViewBag.ListNote as List<NoteDto>;
+}
+
+<div class="List-item mt-2">
+
+    @foreach (var note in listNote)
+    {
+        <div
+            class="item d-flex flex-row justify-content-between mt-3 panel">
+            <p style="width: 15rem;">@note.Name</p>
+            <p>
+                @note.CreateOn
+            </p>
+            <p>
+                @note.DeleteOn
+            </p>
+            @if (@note.Status != 1)
+            {
+                <button
+                    data-noteId="@note.Id"
+                    class="btn btn-primary break"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Add
+                </button>
+            }
+
+            <div class="">
+                <button
+                    data-noteId="@note.Id"
+                    class="btn btn-secondary detail"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample_@note.Id"
+                    aria-expanded="false"
+                    aria-controls="collapseExample">
+                    ...
+                </button>
+            </div>
+        </div>
+        <div class="collapse mt-2" id="collapseExample_@note.Id" style="width: 50vw">
+
+        </div>
+    }
+
+    <!-- Modal -->
+    <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                        Break task
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+                </div>
+                <form asp-action="BreakTask">
+                    <div class="modal-body">
+                        <input id="breakId" name="noteId" style="display: none" readonly/>
+                        <input
+                            type="text"
+                            class="form-control mt-2"
+                            placeholder="Nội dung công việc" name="name"/>
+                        <div class="d-flex flex-row justify-content-between mt-3">
+                            <div class="d-flex flex-column">
+                                <p style="margin-bottom: 0.3rem">Thời gian bắt đầu</p>
+                                <input type="date" class="form-control" name="createOn"/>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p style="margin-bottom: 0.3rem">Thời gian kết thúc</p>
+                                <input type="date" class="form-control" name="delete"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="submit" class="btn btn-warning" style="color: white;">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/individual.js"></script>

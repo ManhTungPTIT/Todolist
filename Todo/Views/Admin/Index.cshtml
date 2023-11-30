@@ -1,0 +1,212 @@
+@page
+@using Todo.Models.Models
+@using Todo.Models.Dtos
+
+@{
+    Layout = "_Admin";
+    var list = ViewBag.ListUser as List<Users>;
+    var listNote = ViewBag.ListNote as List<NoteDto>;
+}
+
+
+<div class="container-fluid row d-flex flex-column">
+    <div class="Main container ">
+        <button
+            class="btn btn-primary mt-1"
+            data-bs-toggle="modal"
+            data-bs-target="#addModal"
+            style="width: 5rem">
+            Add
+        </button>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="addModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">
+                            Add Infomation
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close">
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <input
+                            type="text"
+                            placeholder="Nội dung công việc"
+                            class="form-control"
+                            id="addItem"/>
+
+                        <select
+                            class="form-select mt-3"
+                            id="addLevel"
+                            aria-label="Default select example">
+                            <option selected>Độ ưu tiên</option>
+                            <option value="1">High</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Weak</option>
+                        </select>
+
+                        <select
+                            class="form-select mt-3"
+                            id="AddEmployee"
+                            aria-label="Default select example">
+                            <option selected>Giao cho nhân viên</option>
+                            @foreach (var user in list)
+                            {
+                                <option value="@user.UserName">@user.UserName</option>
+                            }
+                        </select>
+
+                        <div class="d-flex flex-row justify-content-between mt-3">
+                            <div class="d-flex flex-column">
+                                <p style="margin-bottom: 0.3rem">Thời gian bắt đầu</p>
+                                <input type="date" class="form-control" id="createOn"/>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p style="margin-bottom: 0.3rem">Thời gian kết thúc</p>
+                                <input type="date" class="form-control" id="deleteOn"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="add">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-flex justify-content-between align-items-center">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Todo item</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Status</th>
+                    <th>Employee</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                @foreach (var note in listNote)
+                {
+                    <tr>
+                        <td>@note.Id</td>
+                        <td>@note.Name</td>
+                        <td>@note.CreateOn</td>
+                        <td>@note.DeleteOn</td>
+
+                        @if (@note.Status == 0)
+                        {
+                            <td>Đang xử lý</td>
+                        }
+                        else if (@note.Status == 1)
+                        {
+                            <td>Đã hoàn thành</td>
+                        }
+                        else if (@note.Status == 2)
+                        {
+                            <td>Sắp hết hạn</td>
+                        }
+                        else if (@note.Status == 3)
+                        {
+                            <td>Hết hạn</td>
+                        }
+
+                        <td>@note.EmployeeName</td>
+                        <td class="d-flex justify-content-between">
+                            <button class="btn btn-danger delete" data-productId="@note.Id">Delete</button>
+                            @if (@note.Status != 1)
+                            {
+                                <button class="btn btn-warning update" style="color: white" data-NoteId="@note.Id">Update</button>
+                            }
+                            
+                        </td>
+
+                    </tr>
+                }
+                </tbody>
+                <!-- The Modal -->
+                <div id="MyModal" class="modalLogOut">
+                    <div class="modal-contentLogOut">
+                        <div class="modal-headerLogOut pt-3 px-3">
+                            <h4>Update Infomation</h4>
+                            <span class="btn-close" id="Close" style="color: red"></span>
+                        </div>
+                        <div class="modal-bodyLogOut">
+                            <input
+                                type="text"
+                                placeholder="Noi dung cong viec"
+                                class="form-control"
+                                id="todoItem"/>
+
+                            <select
+                                class="form-select mt-3"
+                                id="level"
+                                aria-label="Default select example">
+                                <option selected>Độ ưu tiên</option>
+                                <option value="1">High</option>
+                                <option value="2">Medium</option>
+                                <option value="3">Weak</option>
+                            </select>
+
+                            <select
+                                class="form-select mt-3"
+                                id="employee"
+                                aria-label="Default select example">
+                                <option selected>Giao cho nhân viên</option>
+                                @foreach (var user in list)
+                                {
+                                    <option value="@user.UserName">@user.UserName</option>
+                                }
+
+                            </select>
+
+                            <div class="d-flex flex-row justify-content-between mt-3">
+                                <div class="d-flex flex-column">
+                                    <p style="margin-bottom: 0.3rem">Thời gian bắt đầu</p>
+                                    <input type="date" class="form-control" id="UpdateCreateOn"/>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <p style="margin-bottom: 0.3rem">Thời gian kết thúc</p>
+                                    <input type="date" class="form-control" id="UpdateDeleteOn"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footerLogOut">
+                            <button id="cancel">Cancel</button>
+                            <button id="confirmLogOut">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="/js/Admin.js"></script>

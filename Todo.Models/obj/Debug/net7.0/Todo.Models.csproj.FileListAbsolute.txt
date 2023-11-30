@@ -1,0 +1,14 @@
+D:\Amela\Todolist\Todolist\Todo.Models\bin\Debug\net7.0\Todo.Models.deps.json
+D:\Amela\Todolist\Todolist\Todo.Models\bin\Debug\net7.0\Todo.Models.runtimeconfig.json
+D:\Amela\Todolist\Todolist\Todo.Models\bin\Debug\net7.0\Todo.Models.dll
+D:\Amela\Todolist\Todolist\Todo.Models\bin\Debug\net7.0\Todo.Models.pdb
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.csproj.AssemblyReference.cache
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.AssemblyInfoInputs.cache
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.AssemblyInfo.cs
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.csproj.CoreCompileInputs.cache
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.dll
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\refint\Todo.Models.dll
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.pdb
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\Todo.Models.genruntimeconfig.cache
+D:\Amela\Todolist\Todolist\Todo.Models\obj\Debug\net7.0\ref\Todo.Models.dll

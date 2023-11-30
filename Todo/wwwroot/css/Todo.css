@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Title {
+    background-color: rgb(239,153,33);
+    height: 10vh;
+}
+.Title a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+h3{
+    color: white;
+}
+h4 {
+    color: black;
+}
+.modalLogOut{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    transition:  height 1s;
+}
+
+.modal-contentLogOut{
+    margin-top: 4vh;
+    width: 28%;
+    position: relative;
+    left: 38%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    border-radius: 10px;
+}
+#Close i{
+    color: red;
+    font-size: 2rem;
+}
+.modal-headerLogOut{
+    border-bottom: 1px solid grey;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px ;
+}
+.modal-bodyLogOut{
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.modal-footerLogOut{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    height: 6vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid grey;
+}
+#confirmLogOut{
+    background-color: #0c63e4;
+    width: 4.5rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#cancel{
+    background-color: rgb(108,117,125);
+    color: white;
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+.Menu-icon {
+    height: 90vh;
+    background-color: gray;
+}
+.Item {
+    height: 8rem;
+    cursor: pointer;
+}
+.Item i {
+    color: white;
+}
+.Item p {
+    color: white;
+}
+.Item:hover .child {
+    color: #febd01;
+}
+.Item:hover {
+    background-color: rgba(186, 186, 186, 0.1);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}

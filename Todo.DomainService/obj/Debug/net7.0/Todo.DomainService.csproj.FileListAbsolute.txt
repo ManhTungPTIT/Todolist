@@ -1,0 +1,17 @@
+D:\Amela\Todolist\Todolist\Todo.DomainService\bin\Debug\net7.0\Todo.DomainService.deps.json
+D:\Amela\Todolist\Todolist\Todo.DomainService\bin\Debug\net7.0\Todo.DomainService.runtimeconfig.json
+D:\Amela\Todolist\Todolist\Todo.DomainService\bin\Debug\net7.0\Todo.DomainService.dll
+D:\Amela\Todolist\Todolist\Todo.DomainService\bin\Debug\net7.0\Todo.DomainService.pdb
+D:\Amela\Todolist\Todolist\Todo.DomainService\bin\Debug\net7.0\Todo.Models.dll
+D:\Amela\Todolist\Todolist\Todo.DomainService\bin\Debug\net7.0\Todo.Models.pdb
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.csproj.AssemblyReference.cache
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.AssemblyInfoInputs.cache
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.AssemblyInfo.cs
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.csproj.CoreCompileInputs.cache
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.csproj.CopyComplete
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.dll
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\refint\Todo.DomainService.dll
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.pdb
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\Todo.DomainService.genruntimeconfig.cache
+D:\Amela\Todolist\Todolist\Todo.DomainService\obj\Debug\net7.0\ref\Todo.DomainService.dll
